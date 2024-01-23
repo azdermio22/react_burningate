@@ -1,38 +1,137 @@
-.App {
-  text-align: center;
+body{
+  margin: 0;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+:root{
+  --primary: red;
+  --secondar: orangered;
+  --text: white;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+/* eroe start */
+.header{
+  height: 100vh;
+  width: 100%;
+  background-image: url('https://fitnessfaqs.com/wp-content/uploads/2020/03/meet_your_coach_lever_pro.jpg');
+  background-size: cover;
+  background-position: 0% 70%;
+  position: relative;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.filter{
+  height: 100%;
+  width: 100%;
+  background: radial-gradient(transparent 20%, black 20%);
+  position: absolute;
+}
+
+.text{
+  color: var(--text);
+  font-family: sans-serif;
+  font-weight: 600;
+  user-select: none;
+}
+
+.nav_link{
+  background: none;
+  border: none;
+  height:100%;
+  position: relative;
   display: flex;
-  flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.nav_link:hover::before{
+  content: "";
+  background: linear-gradient(red 20%,transparent 100%);
+  position: absolute;
+  height: 50%;
+  width: 100%;
+  top: -100%;
+  left: 0;
+  animation: nav_link_hover 0.3s;
+  animation-fill-mode: forwards;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.nav_link::before{
+  content: "";
+  background: linear-gradient(red 20%,transparent 100%);
+  position: absolute;
+  height: 50%;
+  width: 100%;
+  top: -100%;
+  left: 0;
+  animation: nav_link_default 0.7s;
+  animation-fill-mode: forwards;
+}
+
+.title_block{
+  left: 10%;
+  top: 37%;
+  position: absolute;
+  text-align: left;
+}
+.title{
+  margin: 0;
+  font-size: 70px;
+}
+
+.subtitle{
+  margin: 0;
+  color: rgb(226, 226, 226);
+  font-size: 20px;
+  letter-spacing: 1px;
+}
+
+.text_logo{
+  letter-spacing: 2px;
+  position: relative;
+  margin-left: 30px;
+  margin-top: 10px;
+  margin-bottom: 2px;
+}
+
+.text_logo::before{
+  content: "";
+  height: 40px;
+border-left: 5px solid red;
+position: absolute;
+transform: rotate(-40deg);
+left: -17px;
+bottom: -16px;
+}
+.text_logo::after{
+  content: "";
+  width: 60px;
+border-top: 5px solid red;
+position: absolute;
+left: -30px;
+top: -3px;
+transform: rotate(-10deg);
+}
+/* the b stay for bootstrap becose this class alreadi exist in it */
+.navbar-b{
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  height: 50px;
+}
+
+@keyframes nav_link_hover {
+  0%{
+    top: -100%;
   }
-  to {
-    transform: rotate(360deg);
+  100%{
+    top: 0;
   }
 }
+@keyframes nav_link_default {
+  0%{
+    top: 0;
+  }
+  100%{
+    top: -100%;
+  }
+}
+/* eroe end */
