@@ -4,24 +4,37 @@ body{
 
 :root{
   --primary: red;
-  --secondar: orangered;
+  --secondary: orange;
   --text: white;
 }
 
 /* eroe start */
 .header{
-  height: 100vh;
+  height: 110vh;
   width: 100%;
   background-image: url('https://fitnessfaqs.com/wp-content/uploads/2020/03/meet_your_coach_lever_pro.jpg');
   background-size: cover;
   background-position: 0% 70%;
   position: relative;
+  overflow: hidden;
+}
+
+.header::before{
+  content: "";
+  width: 110%;
+  height: 64px;
+  background-color: white;
+  position: absolute;
+  transform: rotate(-2.5deg);
+  bottom: -30px;
+  left: -5%;
+  z-index: 1;
 }
 
 .filter{
   height: 100%;
   width: 100%;
-  background: radial-gradient(transparent 20%, black 20%);
+  background: radial-gradient(ellipse at 27% 45%, transparent 0%, black 100%);
   position: absolute;
 }
 
@@ -44,7 +57,7 @@ body{
 
 .nav_link:hover::before{
   content: "";
-  background: linear-gradient(red 20%,transparent 100%);
+  background: linear-gradient(rgba(255, 0, 0, 0.7) 20%,transparent 100%);
   position: absolute;
   height: 50%;
   width: 100%;
@@ -56,7 +69,7 @@ body{
 
 .nav_link::before{
   content: "";
-  background: linear-gradient(red 20%,transparent 100%);
+  background: linear-gradient(rgba(255, 0, 0, 0.7) 20%,transparent 100%);
   position: absolute;
   height: 50%;
   width: 100%;
@@ -116,6 +129,89 @@ transform: rotate(-10deg);
   justify-content: center;
   align-content: center;
   height: 50px;
+}
+
+section{
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+
+.info_data{
+  height: 200px;
+  width: 400px;
+  margin-top: 50px;
+  margin-bottom: 50px;
+  border-radius: 10px;
+  box-shadow: 0px 0px 5px rgb(212, 212, 212);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.info_data_numbers{
+  font-size: 40px;
+  font-weight: 600;
+  margin: 0;
+  user-select: none;
+}
+.info_data_text{
+  font-size: 30px;
+  font-weight: 600;
+  margin: 0;
+  color: var(--primary);
+}
+
+.info_text{
+  font-weight: 600;
+  font-family: sans-serif;
+  color: gray;
+  margin-top: 50px;
+  margin-left: 30px;
+  margin-right: 30px;
+  text-align: center;
+}
+
+.pointed_list{
+  border-left: 3px solid var(--primary);
+  padding-left: 20px;
+  padding-bottom: 20px;
+  padding-top: 20px;
+  position: relative;
+  font-weight: 600;
+  font-family: sans-serif;
+  font-size: 18px;
+  display: flex;
+  align-items: center;
+}
+
+.pointed_list::before{
+  content: "";
+  height: 13px;
+  width: 13px;
+  background-color: var(--secondary);
+  border-radius: 100%;
+  position: absolute;
+  left: -8px;
+  top: 50%;
+  border: 2px solid white;
+  transform: translate(0 ,-50%);
+  outline: 2px solid var(--secondary);
+}
+
+.principles_text{
+  font-family: sans-serif;
+  font-weight: 600;
+  color: gray;
+  font-size: 20px;
+  width: 400px;
+}
+
+.execess_top{
+  border-image:   linear-gradient( transparent 50%, red 50%) 1;
+}
+.execess_bottom{
+  border-image:   linear-gradient( red 50%, transparent 50%) 1;
 }
 
 @keyframes nav_link_hover {
