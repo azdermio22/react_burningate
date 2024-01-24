@@ -82,29 +82,17 @@ Come ogni cosa, però, tutto si impara. La caparbietà e la determinazione saran
             a cui apertamente va il nostro più forte “GRAZIE”.
               </p></div>
           </div>
-          <div className='row' data-aos="fade-up">
-            <DataCard people={People}/>
-            <div className='col-12 col-md-4  d-flex justify-content-center align-items-center'>
-            <div className='info_data'>
-            <PinMap color="red" size={50} />
-            <p className='info_data_numbers'>+23</p>
-            <p className='info_data_text text'>branches in the world</p>
-              </div>
-              </div>
-            <div className='col-12 col-md-4  d-flex justify-content-center align-items-center'>
-            <div className='info_data'>
-            <ClipboardCheck color="red" size={50} />
-            <p className='info_data_numbers'>+564</p>
-            <p className='info_data_text text'>trained instructors</p>
-            </div>
-            </div>
+          <div className='row'>
+            <DataCard icon={People} number={1500} text="trained calisthenics"/>
+            <DataCard icon={PinMap} number={18} text="branches in Italy"/>
+            <DataCard icon={ClipboardCheck} number={240} text="trained instructors"/>
           </div>
         </div>
       </section>
 
       <section>
         <div className='container-fluid goal_section bg-dark'>
-          <div className='goal_title'>OUR GOAL</div>
+          <div className='goal_title' id='prova'>OUR GOAL</div>
           <div className='row'>
             <div className='col-6 d-flex justify-content-center align-items-center'>
               <p className='principles_text'>
@@ -134,6 +122,32 @@ E ciò è possibile solo attraverso una diffusione capillare della conoscenza e 
           </div>
         </div>
       </section>
+      <footer className='container-fluid'>
+        <div className='row'>
+          <div className='col-3 text-white'>
+            <div className='footer_section'>
+            <div><p>partner</p></div>
+          <div className='partner'><img src='https://www.burningate.com/wp-content/uploads/2020/09/241_71-burningate-calisthenics-ironlink.jpg'/></div>
+        <div className='partner'><img src='https://www.burningate.com/wp-content/uploads/2023/02/HiPRO_DanoneLogo_min.png'/></div>
+            </div>
+          </div>
+          <div className='col-3 text-white'>
+            <div className='footer_section'>
+            <div><p>news letter</p></div>
+            </div>
+          </div>
+          <div className='col-3 text-white'>
+            <div className='footer_section'>
+            <div><p>contact</p></div>
+            </div>
+          </div>
+          <div className='col-3 text-white'>
+            <div className='footer_section'>
+            <div><p>useful link</p></div>
+            </div>
+          </div>
+        </div>
+      </footer>
     </div>
   );
 }
