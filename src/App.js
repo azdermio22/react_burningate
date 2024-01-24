@@ -1,8 +1,18 @@
 import './App.css';
 import 'bootstrap/dist/css/bootstrap.css';
 import { People, PinMap, ClipboardCheck} from 'react-bootstrap-icons';
+import React, { useState, useEffect } from "react";
+import AOS from "aos";
+import "aos/dist/aos.css";
+import {DataCard} from './dataCard.js';
+
 
 function App() {
+  useEffect(() => {
+    AOS.init();
+    AOS.refresh();
+  }, []);
+  
   return (
     <div className="App">
       <header className="header">
@@ -29,26 +39,51 @@ function App() {
         <h2 className="text subtitle">DEVELOP YOUR STRENGTH</h2>
         </div>
       </header>
+
+      <section className='prova p-5 m-0'>
+        <div className='cali_title'>WHAT IT IS THE CALISTHENICS<span className='text-danger'>?</span></div>
+        <p className='secondary_text text-dark mx-5'>
+        Il Calisthenics è una forma di allenamento a corpo libero che si basa principalmente su movimenti naturali
+         del proprio corpo facendo leva su un’attrezzatura minima come ad esempio la classica sbarra. È un concentrato
+          di forza e movimenti di ginnastica di base che può essere fatto ovunque: a casa, al parco, in palestra e in
+           qualsiasi altro luogo. È la forma primordiale di allenamento fisico.
+Il corpo umano è una macchina straordinaria, concepita per muoversi, e la storia ci insegna che i nostri antenati sono
+ riusciti a sopravvivere e a superare sfide, in alcuni casi insormontabili, solo grazie al proprio corpo e alla
+  straordinaria fisicità che da esso ne deriva. Purtroppo, però, la società moderna e i nuovi stili di vita minano
+   di continuo ciò per cui siamo nati: muoverci liberamente e progredire sempre di più. “Mens sana in corpore sano” 
+   dicevano gli antichi.
+Il Calisthenics rappresenta la massima espressione di un ritorno alle origini al fine di esplorare ciò che la nostra
+ meravigliosa macchina naturale è in grado di fare e di spingersi. Sicuramente all’inizio non sarà facile anche perché
+  bisogna condizionare e abituare pian piano il nostro corpo a questa tipologia di allenamento.
+Come ogni cosa, però, tutto si impara. La caparbietà e la determinazione saranno fattori fondamentali che aiuteranno
+ a migliorare non solo fisicamente, ma anche e soprattutto sul piano emotivo e mentale. Ad affrontare, cioè, le sfide
+  che ogni giorno la vita ci pone davanti con maggiore sicurezza e fiducia in noi stessi.
+        </p>
+      </section>
+
       <section>
         <div className='container-fluid'>
+          <div className='results_section'>WHAT WE DO<span className='text-danger'>?</span></div>
           <div className='row'>
             <div className='col-12'><p className='info_text'>
+            Dal giorno zero siamo in prima linea sul campo di combattimento per aiutare i nostri partner a divulgare
+            la cultura del Calisthenics e più in generale dell’importanza, sostenuta da decenni di ricerche scientifiche
+            consolidate, circa l’attività fisica al fine di ispirare e migliorare la qualità della vita delle persone.
+            In Burningate crediamo fortemente in valori quali Rispetto, Solidarietà e Uguaglianza. Il movimento è stato creato per
+            raccogliere appassionati del settore e professionisti con lo scopo di dar vita a connessioni e relazioni umane
+            all’insegna di valori etici e morali sani.
+            Noi pratichiamo quello che insegniamo e insegniamo quello che pratichiamo. In questa semplice frase è raccolta
+            l’essenza della nostra filosofia. Non siamo tuttologi, ma specialisti nel Calisthenics al 100%..
             Da più di 3 anni abbiamo certificato oltre 240 istruttori, organizzato + 6 eventi nazionali e internazionali,
-             e all’attivo contiamo + 18 centri affiliati sparsi un po’ per lo stivale. La nostra forza e il nostro orgoglio
-              è data dall’unione e dalla condivisione del movimento sulla base di una fitta rete di partner. Persone come noi
-               che hanno sposato la filosofia e i valori in cui crediamo, permettendo a questa straordinaria disciplina di
-                diffondersi a macchia d’olio in ogni club, parco o circuito fitness di zona. Siamo fieri di ogni singolo membro
-                 a cui apertamente va il nostro più forte “GRAZIE”.
+            e all’attivo contiamo + 18 centri affiliati sparsi un po’ per lo stivale. La nostra forza e il nostro orgoglio
+            è data dall’unione e dalla condivisione del movimento sulla base di una fitta rete di partner. Persone come noi
+            che hanno sposato la filosofia e i valori in cui crediamo, permettendo a questa straordinaria disciplina di
+            diffondersi a macchia d’olio in ogni club, parco o circuito fitness di zona. Siamo fieri di ogni singolo membro
+            a cui apertamente va il nostro più forte “GRAZIE”.
               </p></div>
           </div>
-          <div className='row'>
-            <div className='col-12 col-md-4 d-flex justify-content-center align-items-center'>
-            <div className='info_data'>
-            <People color="red" size={50} />
-            <p className='info_data_numbers'>+1000</p>
-            <p className='info_data_text text'>trained athletes</p>
-              </div>
-              </div>
+          <div className='row' data-aos="fade-up">
+            <DataCard people={People}/>
             <div className='col-12 col-md-4  d-flex justify-content-center align-items-center'>
             <div className='info_data'>
             <PinMap color="red" size={50} />
@@ -66,8 +101,10 @@ function App() {
           </div>
         </div>
       </section>
+
       <section>
-        <div className='container-fluid'>
+        <div className='container-fluid goal_section bg-dark'>
+          <div className='goal_title'>OUR GOAL</div>
           <div className='row'>
             <div className='col-6 d-flex justify-content-center align-items-center'>
               <p className='principles_text'>
