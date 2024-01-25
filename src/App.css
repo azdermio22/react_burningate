@@ -31,7 +31,7 @@ body{
   z-index: 1;
 }
 
-.prova{
+.calisthenics_section{
   background-color: rgb(224, 224, 224);
   color: black !important;
   box-shadow: 1px 0px 5px 0px gray;
@@ -162,8 +162,8 @@ transform: rotate(-10deg);
 }
 /* eroe end */
 section{
-  margin-top: 50px;
-  margin-bottom: 50px;
+  padding-top: 50px;
+  padding-bottom: 50px;
 }
 
 .info_data{
@@ -290,19 +290,37 @@ section{
 
 footer{
   background-color: black;
+  height: 500px;
 }
 
 .footer_section{
   background: linear-gradient(to bottom, rgba(255, 0, 0, 0.39) 0%, transparent 100%);
   margin-left: 5px;
   margin-right: 5px;
-  height: 100%;
+  height: 95%;
   display: flex;
   flex-direction: column;
   align-content: center;
+  margin-top: 20px;
 }
 
 .partner{
-  height: 200px;
-  width: 400px;
+  height: 50%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.footer_title{
+  font-size: 25px;
+  text-align: center;
+  font-weight: 600;
+}
+
+.footer_link{
+  background: none;
+  border: none;
+  color: white;
+  font-weight: 600;
 }

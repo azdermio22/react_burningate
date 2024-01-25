@@ -5,16 +5,27 @@ import React, { useState, useEffect } from "react";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import {DataCard} from './dataCard.js';
+import {BrowserRouter as Router, Routes, Route} from "react-router-dom";
+import {Campionship} from "./Campionship.js";
 
 
 function App() {
   useEffect(() => {
     AOS.init();
     AOS.refresh();
+
+    let home_link = document.querySelector('#home');
+    home_link.addEventListener('click',()=>{
+      window.scrollTo(100, 0);
+    })
   }, []);
-  
   return (
     <div className="App">
+        <Router>
+          <Routes>
+            <Route path="/campionship" element={<Campionship/>}/>
+          </Routes>
+        </Router>
       <header className="header">
         <div className='filter'></div>
         <div className="navbar-b container-fluid">
@@ -40,7 +51,7 @@ function App() {
         </div>
       </header>
 
-      <section className='prova p-5 m-0'>
+      <section className='calisthenics_section p-5 m-0'>
         <div className='cali_title'>WHAT IT IS THE CALISTHENICS<span className='text-danger'>?</span></div>
         <p className='secondary_text text-dark mx-5'>
         Il Calisthenics è una forma di allenamento a corpo libero che si basa principalmente su movimenti naturali
@@ -90,8 +101,8 @@ Come ogni cosa, però, tutto si impara. La caparbietà e la determinazione saran
         </div>
       </section>
 
-      <section>
-        <div className='container-fluid goal_section bg-dark'>
+      <section className='goal_section bg-dark'>
+        <div className='container-fluid h-100'>
           <div className='goal_title' id='prova'>OUR GOAL</div>
           <div className='row'>
             <div className='col-6 d-flex justify-content-center align-items-center'>
@@ -123,27 +134,37 @@ E ciò è possibile solo attraverso una diffusione capillare della conoscenza e 
         </div>
       </section>
       <footer className='container-fluid'>
-        <div className='row'>
-          <div className='col-3 text-white'>
+        <div className='row h-100'>
+          <div className='col-3 text-white h-100'>
             <div className='footer_section'>
-            <div><p>partner</p></div>
+            <div><p className='footer_title'>PARTNER</p></div>
           <div className='partner'><img src='https://www.burningate.com/wp-content/uploads/2020/09/241_71-burningate-calisthenics-ironlink.jpg'/></div>
         <div className='partner'><img src='https://www.burningate.com/wp-content/uploads/2023/02/HiPRO_DanoneLogo_min.png'/></div>
             </div>
           </div>
-          <div className='col-3 text-white'>
+          <div className='col-3 text-white h-100'>
             <div className='footer_section'>
-            <div><p>news letter</p></div>
+            <div><p className='footer_title'>NEWS LETTER</p></div>
             </div>
           </div>
-          <div className='col-3 text-white'>
+          <div className='col-3 text-white h-100'>
             <div className='footer_section'>
-            <div><p>contact</p></div>
+            <div><p className='footer_title'>CONTACT</p></div>
+            <div className='text-center h-100 d-flex justify-conten-evenly flex-column'>
+            <div>assistence:<br/>2754610905</div>
+            <div>email:<br/>burnungate@gmail.com</div>
+            </div>
             </div>
           </div>
-          <div className='col-3 text-white'>
+          <div className='col-3 text-white h-100'>
             <div className='footer_section'>
-            <div><p>useful link</p></div>
+            <div><p className='footer_title'>USEFUL LINK</p></div>
+            <ul className='h-100 d-flex flex-column justify-content-evenly align-items-center'>
+              <button className='footer_link' id='home'><li>home</li></button>
+              <li>about us</li>
+              <li>course</li>
+              <li>campionship</li>
+            </ul>
             </div>
           </div>
         </div>
