@@ -1,3 +1,20 @@
+/* Stile per la scrollbar */
+::-webkit-scrollbar {
+  background-color: black;
+  width: 7px; /* Larghezza massima della scrollbar */
+}
+
+/* Stile per il cursore della scrollbar */
+::-webkit-scrollbar-thumb {
+  background-color: rgba(238, 238, 238, 0.801); /* Colore grigio con leggera trasparenza */
+  border-left: 2px solid black; /* Nessun bordo */
+}
+
+/* Stile per gli angoli della scrollbar */
+::-webkit-scrollbar-corner {
+  background-color: transparent; /* Angoli trasparenti */
+}
+
 body{
   margin: 0;
 }
@@ -70,7 +87,7 @@ body{
 
 .nav_link:hover::before{
   content: "";
-  background: linear-gradient(rgba(255, 0, 0, 0.7) 20%,transparent 100%);
+  background: linear-gradient(rgba(255, 0, 0, 0.7) 0%,transparent 70%);
   position: absolute;
   height: 50%;
   width: 100%;
@@ -82,7 +99,7 @@ body{
 
 .nav_link::before{
   content: "";
-  background: linear-gradient(rgba(255, 0, 0, 0.7) 20%,transparent 100%);
+  background: linear-gradient(rgba(255, 0, 0, 0.7) 0%,transparent 70%);
   position: absolute;
   height: 50%;
   width: 100%;
@@ -324,3 +341,40 @@ footer{
   color: white;
   font-weight: 600;
 }
+
+/* campionship start */
+.camp_header{
+  height: 110vh;
+  width: 100%;
+  background-color: black;
+  overflow: hidden;
+  position: relative;
+}
+.camp_title_container{
+  height: 92vh;
+}
+.camp_title{
+  font-size: 25px;
+  color: white;
+  position: absolute;
+  top: 150px;
+}
+
+.camp_competition{
+  font-size: 40px;
+  color: white;
+
+}
+
+.camp_header::before{
+  content: "";
+  width: 110%;
+  height: 64px;
+  background-color: rgb(224, 224, 224);
+  position: absolute;
+  transform: rotate(-2.5deg);
+  bottom: -30px;
+  left: -5%;
+  z-index: 1;
+}
+/* campionship end */
