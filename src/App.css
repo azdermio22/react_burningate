@@ -83,6 +83,7 @@ body{
   display: flex;
   align-items: center;
   justify-content: center;
+  font-size: 14px;
 }
 
 .nav_link:hover::before{
@@ -122,7 +123,7 @@ body{
 
 .subtitle{
   margin: 0;
-  color: rgb(226, 226, 226);
+  color: white;
   font-size: 20px;
   letter-spacing: 1px;
 }
@@ -130,8 +131,8 @@ body{
 .text_logo{
   letter-spacing: 2px;
   position: relative;
-  margin-left: 30px;
-  margin-top: 10px;
+  margin-left: 110px;
+  margin-top: 20px;
   margin-bottom: 2px;
 }
 
@@ -346,9 +347,10 @@ footer{
 .camp_header{
   height: 110vh;
   width: 100%;
-  background-color: black;
+  background-image: url('https://calisthenics-parks.com/attachments/EThxRd86NTscpPmt6Tv8Y5FxBIGnxz2xYybGCeIC_500.jpg');
   overflow: hidden;
   position: relative;
+  background-size: cover;
 }
 .camp_title_container{
   height: 92vh;
@@ -357,7 +359,7 @@ footer{
   font-size: 25px;
   color: white;
   position: absolute;
-  top: 150px;
+  top: 20px;
 }
 
 .camp_competition{
@@ -366,15 +368,65 @@ footer{
 
 }
 
+.title_button{
+  background-color: white;
+  border: none;
+  height: 40px;
+  width: 120px;
+  border-radius: 5px;
+  color: red;
+  font-weight: 600;
+  position: absolute;
+  bottom: 70px;
+}
+
 .camp_header::before{
   content: "";
   width: 110%;
   height: 64px;
-  background-color: rgb(224, 224, 224);
+  background-color: white;
   position: absolute;
   transform: rotate(-2.5deg);
   bottom: -30px;
   left: -5%;
   z-index: 1;
+}
+
+.tournament{
+  height: 400px;
+  padding-left: 50px;
+  padding-right: 50px;
+  z-index: 1;
+  position: relative;
+  overflow: hidden;
+}
+.camp_filter{
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+  backdrop-filter: blur(3px);
+}
+
+.tournament::before{
+  content:"";
+  height: 70px;
+  width: 10px;
+  position: absolute;
+  background-color: white;
+  bottom: -13px;
+  transform: rotate(-40deg);
+  right: 150px;
+  border-top-left-radius: 5px;
+}
+.tournament::after{
+  content:"";
+  height: 130px;
+  width: 10px;
+  position: absolute;
+  background-color: white;
+  bottom: -5px;
+  transform: rotate(80deg);
+  right: 112px;
 }
 /* campionship end */

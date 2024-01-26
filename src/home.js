@@ -17,8 +17,8 @@ export const Home = () =>{
         <div className='filter'></div>
         <Navbar/>
         <div className="title_block">
-        <h1 className="text title">BURNINGATE</h1>
-        <h2 className="text subtitle">DEVELOP YOUR STRENGTH</h2>
+        <h1 data-aos="fade-down" className="text title">BURNINGATE</h1>
+        <h2 data-aos="fade-down" className="text subtitle">DEVELOP YOUR STRENGTH</h2>
         </div>
       </header>
 
@@ -74,7 +74,7 @@ Come ogni cosa, però, tutto si impara. La caparbietà e la determinazione saran
 
       <section className='goal_section bg-dark'>
         <div className='container-fluid h-100'>
-          <div className='goal_title' id='prova'>OUR GOAL</div>
+          <div className='goal_title' id='prova'>OUR GOALS</div>
           <div className='row'>
             <div className='col-6 d-flex justify-content-center align-items-center'>
               <p className='principles_text'>

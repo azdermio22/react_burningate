@@ -5,12 +5,12 @@ export  const DataCard = (props) => {
     let [cicle, cicleComplete] = useState(0);
     useEffect(()=>{
         let target = document.querySelector('.info_data')
-        let options = {
-            root:null,
-            margin: "0px",
-            thresholds: 1.0,
-        }
-        let observer = new IntersectionObserver((entries)=>{
+        const options = {
+            root: null,
+            rootMargin: '0px',
+            threshold: 0.5,
+          };
+        let observer = new IntersectionObserver((entries, observer)=>{
             entries.forEach((entrie)=> {
                 if (entrie.intersectionRatio != 0) {
                     let interval = setInterval(() => {
