@@ -136,6 +136,39 @@ body{
   margin-bottom: 2px;
 }
 
+.logo{
+  height: 40px;
+  aspect-ratio: 1/1;
+  position: absolute;
+  overflow: hidden;
+  left: -13px;
+  top: -5px;
+}
+
+.logo::before{
+  content: "";
+  height: 60%;
+  width: 10%;
+  background-color: red;
+  position: absolute;
+  bottom: -10%;
+  transform: rotate(-40deg);
+  left: 20%;
+  clip-path: polygon(0 0, 100% 10%, 100% 100%, 0% 100% );
+}
+
+.logo::after{
+  content: "";
+  height: 100%;
+  width: 10%;
+  background-color: red;
+  position: absolute;
+  bottom: -4%;
+  transform: rotate(-100deg);
+  left: 45%;
+  clip-path: polygon(0 10%, 100% 0, 100% 100%, 0% 100% );
+}
+
 .text_logo::before{
   content: "";
   height: 40px;
@@ -157,9 +190,17 @@ transform: rotate(-10deg);
 /* the b stay for bootstrap becose this class alreadi exist in it */
 .navbar-b{
   display: flex;
-  justify-content: center;
+  justify-content: space-evenly;
+  align-content: center;
+}
+
+.smart_nav{
+  display: flex;
+  justify-content: space-evenly;
   align-content: center;
   height: 50px;
+  width: 100%;
+  display: none;
 }
 
 @keyframes nav_link_hover {
@@ -429,4 +470,90 @@ footer{
   transform: rotate(80deg);
   right: 112px;
 }
+.marker{
+  color: red;
+  font-size: 18px;
+  font-weight: 600;
+}
 /* campionship end */
+@media screen and (max-width: 500px) {
+  .smart_nav{
+    display: flex;
+  }
+  .navbar-b{
+    display: none;
+  }
+  footer{
+    height: 2000px;
+  }
+  .footer_section{
+    height: 400px;
+  }
+  .title_block{
+    scale: 0.7;
+    text-align: center;
+    left: -12%;
+  }
+  .header{
+    background-image: url(https://calisthenico.com/wp-content/uploads/2020/12/propedeutica-iron-cross.jpg);
+    background-size: cover;
+    background-position: center;
+  }
+  .filter{
+    background: rgba(0, 0, 0, 0.7);
+  }
+}
+
+
+/* .side_bar1{
+  animation: side_bar1 1s;
+  animation-delay: 2200ms;
+  animation-fill-mode: forwards;
+}
+.side_bar2{
+  animation: side_bar2 1s;
+  animation-delay: 2400ms;
+  animation-fill-mode: forwards;
+}
+.side_bar3{
+  animation: side_bar3 1s;
+  animation-delay: 2600ms;
+  animation-fill-mode: forwards;
+}
+.side_bar4{
+  animation: side_bar4 1s;
+  animation-delay: 2800ms;
+  animation-fill-mode: forwards;
+}
+@keyframes side_bar1 {
+  0%{
+  }
+  100%{
+    transform: translate(-600px);
+  }
+}
+@keyframes side_bar2 {
+  0%{
+  }
+  100%{
+    transform: translate(-750px);
+  }
+}
+@keyframes side_bar3 {
+  0%{
+  }
+  100%{
+    transform: translate(-850px);
+  }
+}
+@keyframes side_bar4 {
+  0%{
+  }
+  100%{
+    transform: translate(-970px);
+  }
+
+} */
+.text_logo{
+  left: -90px;
+}

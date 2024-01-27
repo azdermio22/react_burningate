@@ -10,7 +10,7 @@ export  const DataCard = (props) => {
             rootMargin: '0px',
             threshold: 0.5,
           };
-        let observer = new IntersectionObserver((entries, observer)=>{
+        let observer = new IntersectionObserver((entries)=>{
             entries.forEach((entrie)=> {
                 if (entrie.intersectionRatio != 0) {
                     let interval = setInterval(() => {

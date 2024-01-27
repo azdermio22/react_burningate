@@ -17,16 +17,16 @@ export const Home = () =>{
         <div className='filter'></div>
         <Navbar/>
         <div className="title_block">
-        <h1 data-aos="fade-down" className="text title">BURNINGATE</h1>
-        <h2 data-aos="fade-down" className="text subtitle">DEVELOP YOUR STRENGTH</h2>
+        <h1 data-aos="fade-down" data-aos-duration="2000" className="text title">BURNINGATE</h1>
+        <h2 data-aos="fade-down" data-aos-duration="2000"  className="text subtitle">DEVELOP YOUR STRENGTH</h2>
         </div>
       </header>
 
       <section className='calisthenics_section p-5 m-0'>
         <div className='cali_title'>WHAT IT IS THE CALISTHENICS<span className='text-danger'>?</span></div>
         <p className='secondary_text text-dark mx-5'>
-        Il Calisthenics è una forma di allenamento a corpo libero che si basa principalmente su movimenti naturali
-         del proprio corpo facendo leva su un’attrezzatura minima come ad esempio la classica sbarra. È un concentrato
+        <span className='marker'>IL CALISTHENICS è UNA FORMA DI ALLENAMENTO A CORPO LIBERO CHE SI BASA PRINCIPALMNETE SU MOVIMENTI NATURALI
+         DEL PROPIO CORPO FACENDO LEVA SU UN ATTREZZATURA MINIMA</span> come ad esempio la classica sbarra. È un concentrato
           di forza e movimenti di ginnastica di base che può essere fatto ovunque: a casa, al parco, in palestra e in
            qualsiasi altro luogo. È la forma primordiale di allenamento fisico.
 Il corpo umano è una macchina straordinaria, concepita per muoversi, e la storia ci insegna che i nostri antenati sono
@@ -51,13 +51,13 @@ Come ogni cosa, però, tutto si impara. La caparbietà e la determinazione saran
             Dal giorno zero siamo in prima linea sul campo di combattimento per aiutare i nostri partner a divulgare
             la cultura del Calisthenics e più in generale dell’importanza, sostenuta da decenni di ricerche scientifiche
             consolidate, circa l’attività fisica al fine di ispirare e migliorare la qualità della vita delle persone.
-            In Burningate crediamo fortemente in valori quali Rispetto, Solidarietà e Uguaglianza. Il movimento è stato creato per
+            <span className='marker'>IN BURNINGATE</span> crediamo fortemente in valori quali Rispetto, Solidarietà e Uguaglianza. Il movimento è stato creato per
             raccogliere appassionati del settore e professionisti con lo scopo di dar vita a connessioni e relazioni umane
             all’insegna di valori etici e morali sani.
             Noi pratichiamo quello che insegniamo e insegniamo quello che pratichiamo. In questa semplice frase è raccolta
             l’essenza della nostra filosofia. Non siamo tuttologi, ma specialisti nel Calisthenics al 100%..
-            Da più di 3 anni abbiamo certificato oltre 240 istruttori, organizzato + 6 eventi nazionali e internazionali,
-            e all’attivo contiamo + 18 centri affiliati sparsi un po’ per lo stivale. La nostra forza e il nostro orgoglio
+            <span className='marker'>DA PIU DI 3 ANNI ABBIAMO CERTIFICATO</span>oltre<span className='marker'> 240 ISTRUTTORI</span>, organizzato <span className="marker">+6 EVENTI NAZZIONALI E INTERNAZZIONALI</span>,
+            e all’attivo contiamo <span className='marker'>+ 18 CENTRI</span> affiliati sparsi un po’ per lo stivale. La nostra forza e il nostro orgoglio
             è data dall’unione e dalla condivisione del movimento sulla base di una fitta rete di partner. Persone come noi
             che hanno sposato la filosofia e i valori in cui crediamo, permettendo a questa straordinaria disciplina di
             diffondersi a macchia d’olio in ogni club, parco o circuito fitness di zona. Siamo fieri di ogni singolo membro
@@ -76,7 +76,7 @@ Come ogni cosa, però, tutto si impara. La caparbietà e la determinazione saran
         <div className='container-fluid h-100'>
           <div className='goal_title' id='prova'>OUR GOALS</div>
           <div className='row'>
-            <div className='col-6 d-flex justify-content-center align-items-center'>
+            <div className='col-12 col-md-6 d-flex justify-content-center align-items-center'>
               <p className='principles_text'>
               In qualità di brand tra i più noti in Italia in ambito Fitness, il nostro desiderio più forte
                è coinvolgere e ispirare quante più persone possibili, da questo momento fino ai prossimi decenni,
@@ -87,7 +87,7 @@ E ciò è possibile solo attraverso una diffusione capillare della conoscenza e 
    alla grande.
               </p>
             </div>
-            <div className='col-6 d-flex align-items-center flex-column'>
+            <div className='col-12 col-md-6 d-flex align-items-center flex-column'>
               <div className='w-75'>
               <div className='pointed_list execess_top'>RISPETTO TRA LE PERSONE</div>
               <div className='pointed_list'>ISPIRARE E MOTIVARE GLI ALTRI</div>
@@ -106,28 +106,21 @@ E ciò è possibile solo attraverso una diffusione capillare della conoscenza e 
       </section>
       <footer className='container-fluid'>
         <div className='row h-100'>
-          <div className='col-3 text-white h-100'>
-            <div className='footer_section'>
-            <div><p className='footer_title'>PARTNER</p></div>
-          <div className='partner'><img src='https://www.burningate.com/wp-content/uploads/2020/09/241_71-burningate-calisthenics-ironlink.jpg'/></div>
-        <div className='partner'><img src='https://www.burningate.com/wp-content/uploads/2023/02/HiPRO_DanoneLogo_min.png'/></div>
-            </div>
-          </div>
-          <div className='col-3 text-white h-100'>
+          <div className='col-12 col-md-3 text-white'>
             <div className='footer_section'>
             <div><p className='footer_title'>NEWS LETTER</p></div>
             </div>
           </div>
-          <div className='col-3 text-white h-100'>
+          <div className='col-12 col-md-3 text-white'>
             <div className='footer_section'>
             <div><p className='footer_title'>CONTACT</p></div>
-            <div className='d-flex flex-column justify-content-evenly align-items-center text-center h-100'>
+            <div className='d-flex flex-column justify-content-evenly align-items-center text-center'>
             <p>assistence:<br/>5926571045</p>
             <p>email:<br/>burningate@gmail.com</p>
             </div>
             </div>
           </div>
-          <div className='col-3 text-white h-100'>
+          <div className='col-12 col-md-3 text-white'>
             <div className='footer_section'>
             <div><p className='footer_title'>USEFUL LINK</p></div>
             <ul className='h-100 d-flex flex-column justify-content-evenly align-items-center'>
@@ -136,6 +129,13 @@ E ciò è possibile solo attraverso una diffusione capillare della conoscenza e 
               <li>course</li>
               <li>campionship</li>
             </ul>
+            </div>
+          </div>
+          <div className='col-12 col-md-3 text-white'>
+            <div className='footer_section'>
+            <div><p className='footer_title'>PARTNER</p></div>
+          <div className='partner'><img src='https://www.burningate.com/wp-content/uploads/2020/09/241_71-burningate-calisthenics-ironlink.jpg'/></div>
+        <div className='partner'><img src='https://www.burningate.com/wp-content/uploads/2023/02/HiPRO_DanoneLogo_min.png'/></div>
             </div>
           </div>
         </div>
