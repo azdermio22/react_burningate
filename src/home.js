@@ -9,6 +9,27 @@ export const Home = () =>{
     home_link.addEventListener('click',()=>{
       window.scrollTo(100, 0);
     })
+    let options = {
+      root: null,
+      rootMargin: "0px",
+      threshold: 1,
+    }
+    console.log(document.querySelector('#p'));
+
+    let observer = new IntersectionObserver((entries)=>{
+        entries.forEach((entrie)=> {
+          if (entrie.intersectionRatio != 0) {
+            console.log(document.querySelector(`#${entrie.target.id}`));
+            document.querySelector(`#${entrie.target.id}`).style.className = "goals_animation";
+          }
+        });
+    }, options);
+
+    let goals_container = document.querySelectorAll('.goal_container');
+
+    goals_container.forEach((goal_container)=> {
+      observer.observe(goal_container);
+    });
   }, []);
     return(
        <div>
@@ -89,16 +110,16 @@ E ciò è possibile solo attraverso una diffusione capillare della conoscenza e 
             </div>
             <div className='col-12 col-md-6 d-flex align-items-center flex-column'>
               <div className='w-75'>
-              <div className='pointed_list execess_top'>RISPETTO TRA LE PERSONE</div>
-              <div className='pointed_list'>ISPIRARE E MOTIVARE GLI ALTRI</div>
-              <div className='pointed_list'>MIGLIORARE SE STESSI SEMPRE E COMUNQUE</div>
-              <div className='pointed_list'>ESSERE LEALI E CORRETTI</div>
-              <div className='pointed_list'>UMILTÀ E SPIRITO DI SACRIFICIO</div>
-              <div className='pointed_list'>INFONDERE GIOIA E FIDUCIA</div>
-              <div className='pointed_list'>ESSERE COLLABORATIVI E PROPOSITIVI</div>
-              <div className='pointed_list'>AVERE FOCUS E DISCIPLINA</div>
-              <div className='pointed_list'>LEADERSHIP E GUIDA AL CAMBIAMENTO</div>
-              <div className='pointed_list execess_bottom'>SUPERARE I PROPRI LIMITI</div>
+              <div id='a' className='pointed_list execess_top goal_container'><p className='goal'>RISPETTO TRA LE PERSONE</p></div>
+              <div id='b' className='pointed_list goal_container'><p className='goal'>ISPIRARE E MOTIVARE GLI ALTRI</p></div>
+              <div id='c' className='pointed_list goal_container'><p className='goal'>MIGLIORARE SE STESSI SEMPRE E COMUNQUE</p></div>
+              <div id='d' className='pointed_list goal_container'><p className='goal'>ESSERE LEALI E CORRETTI</p></div>
+              <div id='e' className='pointed_list goal_container'><p className='goal'>UMILTÀ E SPIRITO DI SACRIFICIO</p></div>
+              <div id='f' className='pointed_list goal_container'><p className='goal'>INFONDERE GIOIA E FIDUCIA</p></div>
+              <div id='g' className='pointed_list goal_container'><p className='goal'>ESSERE COLLABORATIVI E PROPOSITIVI</p></div>
+              <div id='h' className='pointed_list goal_container'><p className='goal'>AVERE FOCUS E DISCIPLINA</p></div>
+              <div id='i' className='pointed_list goal_container'><p className='goal'>LEADERSHIP E GUIDA AL CAMBIAMENTO</p></div>
+              <div className='pointed_list execess_bottom goal_container'><p className='goal'>SUPERARE I PROPRI LIMITI</p></div>
               </div>
             </div>
           </div>

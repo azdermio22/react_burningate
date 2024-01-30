@@ -131,7 +131,7 @@ body{
 .text_logo{
   letter-spacing: 2px;
   position: relative;
-  margin-left: 110px;
+  margin-left: 160%;
   margin-top: 20px;
   margin-bottom: 2px;
 }
@@ -201,6 +201,22 @@ transform: rotate(-10deg);
   height: 50px;
   width: 100%;
   display: none;
+}
+
+.goal{
+position: relative;
+left: 570px;
+animation-duration: 1s;
+animation-fill-mode: forwards;
+}
+
+@keyframes goals_animation {
+  0%{
+    left: 500px;
+  }
+  100%{
+    left: 0;
+  }
 }
 
 @keyframes nav_link_hover {
