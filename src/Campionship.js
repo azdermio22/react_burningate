@@ -19,34 +19,25 @@ export const Campionship = () => {
                 <div><p>UPCOMING COMPETITIONS</p></div>
                 <div className="d-flex justify-content-center text-center align-items-center w-100 camp_title_container">
 
-                <div className="bg-danger d-flex flex-column justify-content-center mx-2 my-2 align-items-center tournament">
+                <div className="prova bg-danger d-flex flex-column justify-content-center mx-2 my-2 align-items-center tournament">
                 <div className="camp_competition">CALISTHENICS OFFICIAL CIRCUIT & MILAN</div>
                 <div className="camp_competition">25/12/2024</div>
                 <button className="title_button">MORE INFO</button>
-
                 </div>
+
                 <div className="bg-danger d-flex flex-column text-center justify-content-center mx-2 my-2 align-items-center tournament">
                 <div className="camp_competition">CALISTHENICS OFFICIAL CIRCUIT & MILAN</div>
                 <div className="camp_competition">25/12/2024</div>
                 <button className="title_button">MORE INFO</button>
-
                 </div>
+
+                <div className="bg-danger d-flex flex-column text-center justify-content-center mx-2 my-2 align-items-center tournament">
+                <div className="camp_competition">CALISTHENICS OFFICIAL CIRCUIT & MILAN</div>
+                <div className="camp_competition">25/12/2024</div>
+                <button className="title_button">MORE INFO</button>
+                </div>
+
             </div>
-            <div className="d-flex justify-content-center text-center align-items-center w-100 camp_title_container">
-
-<div className="bg-danger d-flex flex-column justify-content-center mx-2 my-2 align-items-center tournament">
-<div className="camp_competition">CALISTHENICS OFFICIAL CIRCUIT & MILAN</div>
-<div className="camp_competition">25/12/2024</div>
-<button className="title_button">MORE INFO</button>
-
-</div>
-<div className="bg-danger d-flex flex-column text-center justify-content-center mx-2 my-2 align-items-center tournament">
-<div className="camp_competition">CALISTHENICS OFFICIAL CIRCUIT & MILAN</div>
-<div className="camp_competition">25/12/2024</div>
-<button className="title_button">MORE INFO</button>
-
-</div>
-</div>
 <div><p>PAST COMPETITION</p></div>
 <div>
     <div>

@@ -212,11 +212,14 @@ animation-fill-mode: forwards;
 
 @keyframes goals_animation {
   0%{
-    left: 500px;
   }
   100%{
     left: 0;
   }
+}
+
+.prova{
+  scale: 0.5;
 }
 
 @keyframes nav_link_hover {

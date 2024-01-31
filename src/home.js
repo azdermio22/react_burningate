@@ -12,15 +12,15 @@ export const Home = () =>{
     let options = {
       root: null,
       rootMargin: "0px",
-      threshold: 1,
+      threshold: 0.5,
     }
     console.log(document.querySelector('#p'));
 
     let observer = new IntersectionObserver((entries)=>{
         entries.forEach((entrie)=> {
           if (entrie.intersectionRatio != 0) {
-            console.log(document.querySelector(`#${entrie.target.id}`));
-            document.querySelector(`#${entrie.target.id}`).style.className = "goals_animation";
+            let container = document.querySelector(`#${entrie.target.id}`);
+            container.querySelector('p').style.animationName = "goals_animation";
           }
         });
     }, options);
@@ -110,16 +110,16 @@ E ciò è possibile solo attraverso una diffusione capillare della conoscenza e 
             </div>
             <div className='col-12 col-md-6 d-flex align-items-center flex-column'>
               <div className='w-75'>
-              <div id='a' className='pointed_list execess_top goal_container'><p className='goal'>RISPETTO TRA LE PERSONE</p></div>
-              <div id='b' className='pointed_list goal_container'><p className='goal'>ISPIRARE E MOTIVARE GLI ALTRI</p></div>
-              <div id='c' className='pointed_list goal_container'><p className='goal'>MIGLIORARE SE STESSI SEMPRE E COMUNQUE</p></div>
-              <div id='d' className='pointed_list goal_container'><p className='goal'>ESSERE LEALI E CORRETTI</p></div>
-              <div id='e' className='pointed_list goal_container'><p className='goal'>UMILTÀ E SPIRITO DI SACRIFICIO</p></div>
-              <div id='f' className='pointed_list goal_container'><p className='goal'>INFONDERE GIOIA E FIDUCIA</p></div>
-              <div id='g' className='pointed_list goal_container'><p className='goal'>ESSERE COLLABORATIVI E PROPOSITIVI</p></div>
-              <div id='h' className='pointed_list goal_container'><p className='goal'>AVERE FOCUS E DISCIPLINA</p></div>
-              <div id='i' className='pointed_list goal_container'><p className='goal'>LEADERSHIP E GUIDA AL CAMBIAMENTO</p></div>
-              <div className='pointed_list execess_bottom goal_container'><p className='goal'>SUPERARE I PROPRI LIMITI</p></div>
+              <div id='a' className='pointed_list execess_top goal_container'><p className='goal m-0'>RISPETTO TRA LE PERSONE</p></div>
+              <div id='b' className='pointed_list goal_container'><p className='goal m-0'>ISPIRARE E MOTIVARE GLI ALTRI</p></div>
+              <div id='c' className='pointed_list goal_container'><p className='goal m-0'>MIGLIORARE SE STESSI SEMPRE E COMUNQUE</p></div>
+              <div id='d' className='pointed_list goal_container'><p className='goal m-0'>ESSERE LEALI E CORRETTI</p></div>
+              <div id='e' className='pointed_list goal_container'><p className='goal m-0'>UMILTÀ E SPIRITO DI SACRIFICIO</p></div>
+              <div id='f' className='pointed_list goal_container'><p className='goal m-0'>INFONDERE GIOIA E FIDUCIA</p></div>
+              <div id='g' className='pointed_list goal_container'><p className='goal m-0'>ESSERE COLLABORATIVI E PROPOSITIVI</p></div>
+              <div id='h' className='pointed_list goal_container'><p className='goal m-0'>AVERE FOCUS E DISCIPLINA</p></div>
+              <div id='i' className='pointed_list goal_container'><p className='goal m-0'>LEADERSHIP E GUIDA AL CAMBIAMENTO</p></div>
+              <div id='l' className='pointed_list execess_bottom goal_container'><p className='goal m-0'>SUPERARE I PROPRI LIMITI</p></div>
               </div>
             </div>
           </div>
