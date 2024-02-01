@@ -467,6 +467,23 @@ footer{
   font-weight: 600;
   position: absolute;
   bottom: 15%;
+  left: 50%;
+  transform: translate(-50%);
+}
+
+.competition_button{
+  background-color: white;
+  border: none;
+  height: 40px;
+  width: 120px;
+  border-radius: 5px;
+  color: red;
+  font-weight: 600;
+  position: absolute;
+  bottom: 10%;
+  scale: 0.8;
+  left: 48%;
+  transform: translate(-50%);
 }
 
 .tournament{
@@ -491,20 +508,32 @@ footer{
   font-size: 18px;
   font-weight: 600;
 }
-.scale_text{
-  font-size: 22px;
-}
+
 .scale_side_slide{
   scale: 0.5;
   position: relative;
 }
-.scale_side_slide::before{
+.right_filter{
   content: "";
   position: absolute;
   height: 100%;
   width: 100%;
   z-index: 2;
   background-color: rgba(0, 0, 0, 0.2);
+  left: 0;
+  top: 0;
+  animation-duration: 1s;
+}
+.left_filter{
+  content: "";
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  z-index: 2;
+  background-color: rgba(0, 0, 0, 0.2);
+  left: 0;
+  top: 0;
+  animation-duration: 1s;
 }
 /* campionship end */
 @media screen and (max-width: 500px) {
@@ -536,12 +565,47 @@ footer{
 }
 
 .back_slide{
-  width: 33.3%;
-  height: 39%;
-  top: 50%;
+  scale: 0.25;
+  top: 12.5%;
   transform: translateY(-50%);
-  scale: 0.5;
+  z-index: 0;
+}
+
+.center_slide{
   z-index: 1;
+}
+
+.back_slide::before{
+  content: "";
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  z-index: 1;
+  background-color: rgba(0, 0, 0, 0.2);
+  left: 0;
+  top: 0;
+  animation-duration: 1s;
+}
+
+.center_filter{
+  content: "";
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  z-index: 2;
+  background-color: transparent;
+  left: 0;
+  top: 0;
+  user-select: none;
+  animation-duration: 1s;
+  display: none;
+}
+
+.competition{
+  width: 100%;
+  aspect-ratio: 2/1;
+  position: relative;
+  animation-duration: 1s;
 }
 
 @keyframes left_slide {
@@ -568,8 +632,62 @@ footer{
 @keyframes back_slide {
   0%{}
   100%{
+    top: 0;
     scale: 0.5;
     transform: translate(906px);
+  }
+}
+@keyframes right_filter {
+  0%{}
+  100%{
+    background-color: transparent;
+  }
+}
+
+@keyframes center_filter {
+  0%{}
+  100%{
+    background-color: rgba(0, 0, 0, 0.2);
+  }
+}
+
+
+
+@keyframes left_slide_left {
+  0%{}
+  100%{
+    z-index: 1;
+    scale: 1;
+    transform: translate(454px);
+  }
+}
+@keyframes right_slide_left {
+  0%{}
+  100%{
+    z-index: 0;
+    scale: 0.25;
+    transform: translate(-1780px);
+  }
+}
+@keyframes center_slide_left {
+  0%{}
+  100%{
+    scale: 0.5;
+    transform: translate(905px);
+  }
+}
+@keyframes back_slide_left {
+  0%{}
+  100%{
+    top: 0;
+    scale: 0.5;
+    transform: translate(-906px);
+  }
+}
+@keyframes left_filter {
+  0%{}
+  100%{
+    background-color: transparent;
   }
 }
 
