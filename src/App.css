@@ -169,6 +169,39 @@ body{
   clip-path: polygon(0 10%, 100% 0, 100% 100%, 0% 100% );
 }
 
+.logo_white{
+  height: 40%;
+  aspect-ratio: 1/1;
+  position: absolute;
+  overflow: hidden;
+  bottom: 0;
+  right: 10%;
+}
+
+.logo_white::before{
+  content: "";
+  height: 60%;
+  width: 10%;
+  background-color: white;
+  position: absolute;
+  bottom: -10%;
+  transform: rotate(-40deg);
+  left: 20%;
+  clip-path: polygon(0 0, 100% 10%, 100% 100%, 0% 100% );
+}
+
+.logo_white::after{
+  content: "";
+  height: 100%;
+  width: 10%;
+  background-color: white;
+  position: absolute;
+  bottom: -6%;
+  transform: rotate(-100deg);
+  left: 46%;
+  clip-path: polygon(0 10%, 100% 0, 100% 100%, 0% 100% );
+}
+
 .text_logo::before{
   content: "";
   height: 40px;
@@ -216,10 +249,6 @@ animation-fill-mode: forwards;
   100%{
     left: 0;
   }
-}
-
-.prova{
-  scale: 0.5;
 }
 
 @keyframes nav_link_hover {
@@ -423,9 +452,9 @@ footer{
 }
 
 .camp_competition{
+  position: relative;
   font-size: 40px;
   color: white;
-
 }
 
 .title_button{
@@ -437,28 +466,17 @@ footer{
   color: red;
   font-weight: 600;
   position: absolute;
-  bottom: 70px;
-}
-
-.camp_header::before{
-  content: "";
-  width: 110%;
-  height: 64px;
-  background-color: white;
-  position: absolute;
-  transform: rotate(-2.5deg);
-  bottom: -30px;
-  left: -5%;
-  z-index: 1;
+  bottom: 15%;
 }
 
 .tournament{
-  height: 400px;
-  padding-left: 50px;
-  padding-right: 50px;
+  width: 860px;
+  aspect-ratio: 2/1;
   z-index: 1;
   position: relative;
   overflow: hidden;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
 }
 .camp_filter{
   position: absolute;
@@ -468,31 +486,25 @@ footer{
   backdrop-filter: blur(3px);
 }
 
-.tournament::before{
-  content:"";
-  height: 70px;
-  width: 10px;
-  position: absolute;
-  background-color: white;
-  bottom: -13px;
-  transform: rotate(-40deg);
-  right: 150px;
-  border-top-left-radius: 5px;
-}
-.tournament::after{
-  content:"";
-  height: 130px;
-  width: 10px;
-  position: absolute;
-  background-color: white;
-  bottom: -5px;
-  transform: rotate(80deg);
-  right: 112px;
-}
 .marker{
   color: red;
   font-size: 18px;
   font-weight: 600;
+}
+.scale_text{
+  font-size: 22px;
+}
+.scale_side_slide{
+  scale: 0.5;
+  position: relative;
+}
+.scale_side_slide::before{
+  content: "";
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  z-index: 2;
+  background-color: rgba(0, 0, 0, 0.2);
 }
 /* campionship end */
 @media screen and (max-width: 500px) {
@@ -523,6 +535,43 @@ footer{
   }
 }
 
+.back_slide{
+  width: 33.3%;
+  height: 39%;
+  top: 50%;
+  transform: translateY(-50%);
+  scale: 0.5;
+  z-index: 1;
+}
+
+@keyframes left_slide {
+  0%{}
+  100%{
+    scale: 0.25;
+    transform: translate(1480px);
+  }
+}
+@keyframes right_slide {
+  0%{}
+  100%{
+    scale: 1;
+    transform: translate(-452px);
+  }
+}
+@keyframes center_slide {
+  0%{}
+  100%{
+    scale: 0.5;
+    transform: translate(-905px);
+  }
+}
+@keyframes back_slide {
+  0%{}
+  100%{
+    scale: 0.5;
+    transform: translate(906px);
+  }
+}
 
 /* .side_bar1{
   animation: side_bar1 1s;
