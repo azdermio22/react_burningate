@@ -17,6 +17,7 @@
 
 body{
   margin: 0;
+  overflow-x: hidden;
 }
 
 :root{
@@ -441,6 +442,19 @@ footer{
   position: relative;
   background-size: cover;
 }
+
+.camp_header::before{
+    content: "";
+  width: 110%;
+  height: 64px;
+  background-color: white;
+  position: absolute;
+  transform: rotate(-2.5deg);
+  bottom: -30px;
+  left: -5%;
+  z-index: 1;
+}
+
 .camp_title_container{
   height: 92vh;
 }
@@ -568,11 +582,6 @@ footer{
   scale: 0.25;
   top: 12.5%;
   transform: translateY(-50%);
-  z-index: 0;
-}
-
-.center_slide{
-  z-index: 1;
 }
 
 .back_slide::before{
@@ -580,7 +589,6 @@ footer{
   position: absolute;
   height: 100%;
   width: 100%;
-  z-index: 1;
   background-color: rgba(0, 0, 0, 0.2);
   left: 0;
   top: 0;
@@ -606,13 +614,31 @@ footer{
   aspect-ratio: 2/1;
   position: relative;
   animation-duration: 1s;
+  margin-top: 60px;
+  margin-bottom: 60px;
+}
+
+.past_competition{
+  padding-top: 120px;
+}
+
+.past_competition::before{
+  content: "";
+  position: absolute;
+  background-color: blue;
+  width: 110%;
+  height: 64px;
+  transform: rotate(-2.5deg);
+  background-color: white;
+  left: -5%;
+  top: -30px;
 }
 
 @keyframes left_slide {
   0%{}
   100%{
     scale: 0.25;
-    transform: translate(1480px);
+    transform: translate(1800px);
   }
 }
 @keyframes right_slide {
@@ -656,7 +682,6 @@ footer{
 @keyframes left_slide_left {
   0%{}
   100%{
-    z-index: 1;
     scale: 1;
     transform: translate(454px);
   }
@@ -664,9 +689,8 @@ footer{
 @keyframes right_slide_left {
   0%{}
   100%{
-    z-index: 0;
     scale: 0.25;
-    transform: translate(-1780px);
+    transform: translate(-1800px);
   }
 }
 @keyframes center_slide_left {
