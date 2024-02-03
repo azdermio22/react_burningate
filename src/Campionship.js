@@ -3,6 +3,30 @@ import {useEffect} from "react";
 
 export const Campionship = () => {
     useEffect(()=>{
+        let competition_triger = document.querySelector('.competition_triger');
+        let x = 0;
+        let y = 0;
+
+        competition_triger.addEventListener('mousemove',()=>{
+            y = window.event.pageY;
+            x = window.event.clientX;
+        })
+
+        let competition = document.querySelector('.competition')
+        let margin_top = competition.getBoundingClientRect().y;
+        competition_triger.addEventListener('click',()=>{
+            console.log(margin_top);
+            console.log(y);
+            y -= margin_top;
+            console.log(y);
+            competition_triger.style.width = "5px";
+            competition_triger.style.height = "5px";
+            competition_triger.style.left = x+"px";
+            competition_triger.style.top = y+"px";
+            competition_triger.style.backgroundColor = "white";
+            // competition_triger.style.animationName = "white_boul";
+        })
+
         let left_slide = document.querySelector('.left_slide');
         let right_slide = document.querySelector('.right_slide');
         let center_slide = document.querySelector('.center_slide');
@@ -115,13 +139,17 @@ export const Campionship = () => {
         <div className="row">
             <div className="col-4 d-flex justify-content-center align-items-center">
                 <div className="competition bg-danger text-center">
+                    <div className="competition_triger"></div>
                 <div className="text-white fs-3">CALISTHENICS OFFICIAL CIRCUIT & MILAN</div>
                         <div className="text-white fs-3">25/12/2024</div>
                         <div className="text-white fs-5 mt-4">2 SET RANKING CLASSIC 75” + 60” </div>
                 </div>
             </div>
-            <div className="col-4 p-0 text-white"><p>eifu ueb i vt v crs crcatdc crc ftrxtyjhsdbaic uuy iui uf es rfres wesdt v ug es ex sazwxw zsdxeszxty nkljn jvdtzaw zerx zaw zwe z3w 3 ewstrd err ex rxrx  rsdx drxc dr x rszes zesxsxsexzse zsez ez</p></div>
-            <div className="col-4 p-0"><iframe width="75%" height="315" src="https://www.youtube.com/embed/81ucmcSAxzA?si=wNPGod_q8yb7S5zG" title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowFullScreen></iframe></div>
+            <div className="col-4 p-0 text-white d-flex justify-content-center align-items-center"><p className="prova">Gli atleti dovranno eseguire la sequenza di esercizi sopra riportata entro il tempo max di 7’
+
+La sequenza di esercizi in questione non è altro che una gara in cui gli esercizi vengono eseguiti in maniera consecutiva senza pausa cercando di completare il tutto nel minor tempo possibile.
+Tutti gli esercizi riportati possono essere eseguiti in un’unica serie o in caso di sopraggiungimento della fatica o di scelta personale, possono essere interrotti e poi ripresi fino al completamento delle ripetizioni indicate. Solo una volta eseguite tutte le ripetizioni di un dato esercizio si può passare all’esercizio successivo.</p></div>
+            <div className="col-4 p-0 d-flex justify-content-center align-items-center"><iframe width="300px" height="200px" src="https://www.youtube.com/embed/81ucmcSAxzA?si=wNPGod_q8yb7S5zG" title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowFullScreen></iframe></div>
         </div>
     </div>
 </div>
