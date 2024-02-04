@@ -1,13 +1,18 @@
 import {Navbar} from "./navbar";
-import {useEffect} from "react";
+import {useEffect, useState} from "react";
 
 export const Campionship = () => {
+
+    let [classification_toggle, set_classification_toggle] = useState(false);
+
     useEffect(()=>{
         let competition_trigers = document.querySelectorAll('.competition_triger');
+        let competition_info = document.querySelectorAll('.competition_info');
+        let classification = document.querySelectorAll('.classification');
         let x = 0;
         let y = 0;
 
-        competition_trigers.forEach((competition_triger)=> {
+        competition_trigers.forEach((competition_triger, i)=> {
             competition_triger.addEventListener('mousemove',()=>{
                 y = window.event.offsetY;
                 x = window.event.clientX;
@@ -22,6 +27,11 @@ export const Campionship = () => {
                 competition_triger.style.top = y+"px";
                 competition_triger.style.backgroundColor = "white";
                 competition_triger.style.animationName = "white_boul";
+                setTimeout(() => {       
+                    console.log(classification_toggle);           
+                    set_classification_toggle(classification_toggle = !classification_toggle);
+                    console.log(classification_toggle);
+                }, 300);
                 setTimeout(()=>{
                     competition_triger.style.backgroundColor = "transparent";
                     competition_triger.style.width = "100%";
@@ -99,6 +109,21 @@ export const Campionship = () => {
                 </div>
             </div>
             </header>
+            <section>
+                <div className="container-fluid">
+                    <div className="row">
+                        <div className="col-4 d-flex justify-content-center">
+                            <div className="regulation"></div>
+                        </div>
+                        <div className="col-4 d-flex justify-content-center">
+                        <div className="regulation"></div>
+                        </div>
+                        <div className="col-4 d-flex justify-content-center">
+                        <div className="regulation"></div>
+                        </div>
+                    </div>
+                </div>
+            </section>
             <section className="my-5">
                 <div><p>UPCOMING COMPETITIONS</p></div>
             <div className="container-fluid">
@@ -144,13 +169,39 @@ export const Campionship = () => {
 <div><p>PAST COMPETITION</p></div>
 <div>
     <div className="past_competition bg-dark position-relative">
-        <div className="row">
+        <div className="row w-100">
             <div className="col-4 d-flex justify-content-center align-items-center">
                 <div className="competition bg-danger text-center">
-                    <div className="competition_triger"></div>
+                <div className="competition_triger"></div>
+                    {classification_toggle == false ?
+                    <div className="competition_info">
                 <div className="text-white fs-3">CALISTHENICS OFFICIAL CIRCUIT & MILAN</div>
                         <div className="text-white fs-3">25/12/2024</div>
                         <div className="text-white fs-5 mt-4">2 SET RANKING CLASSIC 75” + 60” </div>
+                    </div> :
+                    <div className="h-100 classification container-fluid d-flex flex-column justify-content-evenly align-items-center">
+                        <div className="row classification_row bg-dark text-white">
+                            <div className="col-2">place</div>
+                            <div className="col-8">atlete</div>
+                            <div className="col-2">prize</div>
+                        </div>
+                        <div className="row classification_row bg-dark">
+                            <div className="col-2">#1</div>
+                            <div className="col-8">gagi yatarow</div>
+                            <div className="col-2">600$</div>
+                        </div>
+                        <div className="row classification_row bg-dark">
+                            <div className="col-2">#2</div>
+                            <div className="col-8">danny lazzarin</div>
+                            <div className="col-2">200$</div>
+                        </div>
+                        <div className="row classification_row bg-dark">
+                            <div className="col-2">#3</div>
+                            <div className="col-8">gagi yatarow</div>
+                            <div className="col-2">100$</div>
+                        </div>
+                    </div>
+                }
                 </div>
             </div>
             <div className="col-4 p-0 text-white d-flex justify-content-center align-items-center"><p>Gli atleti dovranno eseguire la sequenza di esercizi sopra riportata entro il tempo max di 7’
@@ -159,13 +210,20 @@ Tutti gli esercizi riportati possono essere eseguiti in un’unica serie o in ca
 </div>
             <div className="col-4 p-0 d-flex justify-content-center align-items-center"><iframe width="300px" height="200px" src="https://www.youtube.com/embed/81ucmcSAxzA?si=wNPGod_q8yb7S5zG" title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowFullScreen></iframe></div>
         </div>
-        <div className="row">
+        <div className="row w-100">
             <div className="col-4 d-flex justify-content-center align-items-center">
                 <div className="competition bg-danger text-center">
                     <div className="competition_triger"></div>
+                    {classification_toggle == false ?
+                    <div className="competition_info">
                 <div className="text-white fs-3">CALISTHENICS OFFICIAL CIRCUIT & MILAN</div>
                         <div className="text-white fs-3">25/12/2024</div>
                         <div className="text-white fs-5 mt-4">2 SET RANKING CLASSIC 75” + 60” </div>
+                    </div> :
+                    <div className="classification">
+                        <p>prova</p>
+                    </div>
+                }
                 </div>
             </div>
             <div className="col-4 p-0 text-white d-flex justify-content-center align-items-center"><p>Gli atleti dovranno eseguire la sequenza di esercizi sopra riportata entro il tempo max di 7’
