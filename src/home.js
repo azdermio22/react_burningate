@@ -35,7 +35,6 @@ export const Home = () =>{
        <div>
         <div>
              <header className="header">
-        <div className='filter'></div>
         <Navbar/>
         <div className="title_block">
         <h1 data-aos="fade-down" data-aos-duration="2000" className="text title">BURNINGATE</h1>

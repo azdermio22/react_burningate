@@ -22,7 +22,7 @@ body{
 .header{
   height: 110vh;
   width: 100%;
-  background-image: url('https://fitnessfaqs.com/wp-content/uploads/2020/03/meet_your_coach_lever_pro.jpg');
+  background: radial-gradient(ellipse at 27% 45%, transparent 0%, black 100%), url('https://fitnessfaqs.com/wp-content/uploads/2020/03/meet_your_coach_lever_pro.jpg');
   background-size: cover;
   background-position: 0% 70%;
   position: relative;
@@ -45,13 +45,6 @@ body{
   background-color: rgb(224, 224, 224);
   color: black !important;
   box-shadow: 1px 0px 5px 0px gray;
-}
-
-.filter{
-  height: 100%;
-  width: 100%;
-  background: radial-gradient(ellipse at 27% 45%, transparent 0%, black 100%);
-  position: absolute;
 }
 
 .text{
@@ -124,9 +117,6 @@ body{
 .text_logo{
   letter-spacing: 2px;
   position: relative;
-  margin-left: 160%;
-  margin-top: 20px;
-  margin-bottom: 2px;
 }
 
 .logo{
@@ -134,8 +124,13 @@ body{
   aspect-ratio: 1/1;
   position: absolute;
   overflow: hidden;
-  left: -13px;
-  top: -5px;
+  /* left: -13px;
+  top: -5px; */
+}
+
+.nav_logo_setting{
+  top: -20px;
+  left: 0;
 }
 
 .logo::before{
@@ -234,6 +229,105 @@ position: relative;
 left: 570px;
 animation-duration: 1s;
 animation-fill-mode: forwards;
+}
+
+#home{
+  animation-name: nav_link1;
+  animation-duration: 1s;
+  animation-delay: 3s;
+  animation-fill-mode: forwards;
+}
+#about_us{
+  animation-name: nav_link2;
+  animation-duration: 1s;
+  animation-delay: 3.2s;
+  animation-fill-mode: forwards;
+}
+#course{
+  animation-name: nav_link3;
+  animation-duration: 1s;
+  animation-delay: 3.4s;
+  animation-fill-mode: forwards;
+}
+#campionship{
+  animation-name: nav_link4;
+  animation-duration: 1s;
+  animation-delay: 3.6s;
+  animation-fill-mode: forwards;
+}
+
+.brand_container{
+  position: relative;
+  margin-top: 30px;
+  margin-left: 110px;
+  background: radial-gradient(ellipse at 27% 45%, transparent 0%, black 100%), url('https://fitnessfaqs.com/wp-content/uploads/2020/03/meet_your_coach_lever_pro.jpg');
+  background-size: 1500px 1400px;
+  background-position: -110vw -30vh;
+  background-repeat: no-repeat;
+  z-index: 1;
+  animation-name: brand;
+  animation-duration: 1s;
+  animation-delay: 2.5s;
+  animation-fill-mode: forwards;
+  height: 100vh;
+  width: 200vw;
+}
+
+#text_brand{
+  animation-name: text_brand;
+  animation-duration: 1s;
+  animation-delay: 5s;
+  animation-fill-mode: forwards;
+  margin-left: 22px;
+  margin-top: 2px;
+}
+
+@keyframes text_brand {
+  0%{
+  }
+  100%{
+    transform: translate(-300px);
+  }
+}
+
+@keyframes nav_link1 {
+  0%{
+  }
+  100%{
+    transform: translate(-900px);
+  }
+}
+
+@keyframes nav_link2 {
+  0%{
+  }
+  100%{
+    transform: translate(-1000px);
+  }
+}
+
+@keyframes nav_link3 {
+  0%{
+  }
+  100%{
+    transform: translate(-1100px);
+  }
+}
+
+@keyframes nav_link4 {
+  0%{
+  }
+  100%{
+    transform: translate(-1230px);
+  }
+}
+
+@keyframes brand {
+  0%{
+  }
+  100%{
+    transform: translate(-110px);
+  }
 }
 
 @keyframes goals_animation {
@@ -740,7 +834,6 @@ footer{
     background-color: transparent;
   }
 }
-
 .classification_row{
   color: white;
   border-radius: 10px;
@@ -750,57 +843,4 @@ footer{
   display: flex;
   justify-content: center;
   align-items: center;
-}
-
-/* .side_bar1{
-  animation: side_bar1 1s;
-  animation-delay: 2200ms;
-  animation-fill-mode: forwards;
-}
-.side_bar2{
-  animation: side_bar2 1s;
-  animation-delay: 2400ms;
-  animation-fill-mode: forwards;
-}
-.side_bar3{
-  animation: side_bar3 1s;
-  animation-delay: 2600ms;
-  animation-fill-mode: forwards;
-}
-.side_bar4{
-  animation: side_bar4 1s;
-  animation-delay: 2800ms;
-  animation-fill-mode: forwards;
-}
-@keyframes side_bar1 {
-  0%{
-  }
-  100%{
-    transform: translate(-600px);
-  }
-}
-@keyframes side_bar2 {
-  0%{
-  }
-  100%{
-    transform: translate(-750px);
-  }
-}
-@keyframes side_bar3 {
-  0%{
-  }
-  100%{
-    transform: translate(-850px);
-  }
-}
-@keyframes side_bar4 {
-  0%{
-  }
-  100%{
-    transform: translate(-970px);
-  }
-
-} */
-.text_logo{
-  left: -90px;
 }
