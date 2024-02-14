@@ -124,13 +124,14 @@ body{
   aspect-ratio: 1/1;
   position: absolute;
   overflow: hidden;
-  /* left: -13px;
-  top: -5px; */
+  z-index: 1;
 }
 
 .nav_logo_setting{
-  top: -20px;
-  left: 0;
+  left: 110px;
+  top: 9px;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
 }
 
 .logo::before{
@@ -213,6 +214,8 @@ transform: rotate(-10deg);
   display: flex;
   justify-content: space-evenly;
   align-content: center;
+  position: fixed;
+  top: 0;
 }
 
 .smart_nav{
@@ -232,61 +235,47 @@ animation-fill-mode: forwards;
 }
 
 #home{
-  animation-name: nav_link1;
   animation-duration: 1s;
-  animation-delay: 3s;
+  animation-delay: 0.6s;
   animation-fill-mode: forwards;
 }
 #about_us{
-  animation-name: nav_link2;
   animation-duration: 1s;
-  animation-delay: 3.2s;
+  animation-delay: 0.8s;
   animation-fill-mode: forwards;
 }
 #course{
-  animation-name: nav_link3;
   animation-duration: 1s;
-  animation-delay: 3.4s;
+  animation-delay: 1s;
   animation-fill-mode: forwards;
 }
 #campionship{
-  animation-name: nav_link4;
   animation-duration: 1s;
-  animation-delay: 3.6s;
+  animation-delay: 1.2s;
   animation-fill-mode: forwards;
 }
 
 .brand_container{
   position: relative;
-  margin-top: 30px;
-  margin-left: 110px;
-  background: radial-gradient(ellipse at 27% 45%, transparent 0%, black 100%), url('https://fitnessfaqs.com/wp-content/uploads/2020/03/meet_your_coach_lever_pro.jpg');
-  background-size: 1500px 1400px;
-  background-position: -110vw -30vh;
-  background-repeat: no-repeat;
   z-index: 1;
-  animation-name: brand;
   animation-duration: 1s;
-  animation-delay: 2.5s;
   animation-fill-mode: forwards;
-  height: 100vh;
-  width: 200vw;
+  margin-left: 93px;
 }
 
 #text_brand{
-  animation-name: text_brand;
   animation-duration: 1s;
-  animation-delay: 5s;
   animation-fill-mode: forwards;
-  margin-left: 22px;
-  margin-top: 2px;
+  margin-top: 30px;
+  animation-delay: 0.5s;
+
 }
 
 @keyframes text_brand {
   0%{
   }
   100%{
-    transform: translate(-300px);
+    transform: translate(-200px);
   }
 }
 
@@ -294,7 +283,7 @@ animation-fill-mode: forwards;
   0%{
   }
   100%{
-    transform: translate(-900px);
+    transform: translate(-900px, -10px);
   }
 }
 
@@ -302,7 +291,7 @@ animation-fill-mode: forwards;
   0%{
   }
   100%{
-    transform: translate(-1000px);
+    transform: translate(-1000px, -10px);
   }
 }
 
@@ -310,7 +299,7 @@ animation-fill-mode: forwards;
   0%{
   }
   100%{
-    transform: translate(-1100px);
+    transform: translate(-1100px, -10px);
   }
 }
 
@@ -318,7 +307,7 @@ animation-fill-mode: forwards;
   0%{
   }
   100%{
-    transform: translate(-1230px);
+    transform: translate(-1230px, -10px);
   }
 }
 
@@ -326,7 +315,18 @@ animation-fill-mode: forwards;
   0%{
   }
   100%{
-    transform: translate(-110px);
+    transform: translate(-100px, -12px);
+  }
+}
+
+@keyframes logo {
+  0%{
+  }
+  100%{
+    transform: translate(-100px , -12px);
+    /* background-color: rgba(0, 0, 0, 0.2);
+    backdrop-filter: blur(5px);
+    box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.2); */
   }
 }
 
